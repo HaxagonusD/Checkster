@@ -1,0 +1,20 @@
+.team-members {
+	margin-top: 5rem;
+	display: flex;
+	justify-content: space-evenly;
+}
+
+.team-members img {
+	padding: 1em;
+	border: 2px solid black;
+}
+
+.purpose {
+	width: 50%;
+	margin: 0 auto;
+}
+
+.purpose p {
+	text-align: left;
+	font-size: 1.1em;
+}
