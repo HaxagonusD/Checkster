@@ -1,0 +1,41 @@
+.nav {
+	display: flex;
+	justify-content: space-evenly;
+	background: #056dae;
+	width: 100%;
+	margin: 0;
+	padding: 0;
+}
+
+.nav h3 {
+	text-align: left;
+}
+
+.nav h1 {
+	display: flex;
+	align-items: center;
+	color: white;
+}
+.nav img {
+	height: 100px;
+	width: 100px;
+}
+.nav ul,
+.nav img {
+	margin-right: 0.3em;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-evenly;
+	align-self: center;
+}
+
+.nav li {
+	list-style: none;
+	color: white;
+	margin: 0 2em;
+}
+
+.nav a {
+	cursor: pointer;
+	text-decoration: none;
+}

@@ -1,20 +1,20 @@
 import "./App.css";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import Home from "./components/Home";
 import Nav from "./components/Nav";
 import About from "./components/About";
-import Header from "./components/Header";
-import Banner from "./components/Banner";
-import Steps from "./components/Steps";
-import Upload from "./components/Upload";
 
 function App() {
 	return (
-		<div className="App">
-			<Nav />
-			<Header />
-			<Banner />
-			<Steps />
-			<Upload />
-		</div>
+		<Router>
+			<div className="App">
+				<Nav />
+				<Switch>
+					<Route exact path="/" component={Home} />
+					<Route exact path="/about" component={About} />
+				</Switch>
+			</div>
+		</Router>
 	);
 }
 

@@ -1,27 +1,45 @@
 import React, { useState } from "react";
 import axios from "axios";
+import "../css/Upload.css";
 
-function FileUpload() {
+const Upload = () => {
 	const [file, setFile] = useState("");
-
-	function handleUpload(event) {
-		setFile(event.target.files[0]);
-	}
-
-	console.log(file);
-
+	const [filename, setfilename] = useState("chose file ");
+	const [upLoadingFile, setUpLoadingFile] = useState({});
+	const handelFile = (e) => {
+		setFile(e.target.files[0]);
+		setfilename(e.target.files[0].name);
+	};
+	const handleSumbit = async (e) => {
+		e.preventDefault();
+		const formData = new FormData();
+		formData.append("file", file);
+		try {
+			const res = await axios.post("/uploads", formData, {
+				headers: {
+					"Content-Type": "multipart/form-data",
+				},
+			});
+			const { fileName, filePath } = res.data;
+			setUpLoadingFile({ fileName, filePath });
+		} catch (error) {
+			if (error.response.status === 500) {
+				console.log("there are problem from the server");
+			} else {
+				console.log(error.response.data.msg);
+			}
+		}
+	};
 	return (
-		<div id="upload-box">
-			<input type="file" onChange={handleUpload} />
-			{file && <ImageThumb image={file} />}
+		<div className="upload-form">
+			<form onSubmit={handleSumbit}>
+				<input type="file" onChange={handelFile} />
+				<label htmlFor="customFile"> {filename}</label>
+
+				<input type="submit" value="Sumbit" />
+			</form>
 		</div>
 	);
-}
-
-const ImageThumb = ({ image }) => {
-	return <img src={URL.createObjectURL(image)} alt={image.name} />;
 };
 
-export default function App() {
-	return <FileUpload />;
-}
+export default Upload;

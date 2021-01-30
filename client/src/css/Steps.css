@@ -1,0 +1,39 @@
+.steps {
+	display: flex;
+	justify-content: space-evenly;
+	flex-wrap: wrap;
+	padding: 3em;
+	margin: 0 auto;
+	height: auto;
+	background: #25a6da;
+}
+
+.steps img {
+	width: auto;
+	height: 300px;
+	align-self: center;
+}
+
+.steps h1 {
+	font-size: 3em;
+	align-self: center;
+	color: white;
+}
+
+.steps ul {
+	display: flex;
+	flex-direction: column;
+	text-align: left;
+}
+
+.steps ul li {
+	list-style-type: none;
+	font-size: 2em;
+	color: white;
+	margin: 1em 0;
+}
+
+.number-order {
+	font-weight: bold;
+	font-size: 1.4em;
+}
