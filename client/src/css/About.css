@@ -2,11 +2,13 @@
 	margin-top: 5rem;
 	display: flex;
 	justify-content: space-evenly;
+	flex-wrap: wrap;
 }
 
 .team-members img {
 	padding: 1em;
 	border: 2px solid black;
+	margin: 1em;
 }
 
 .purpose {
