@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 export default function Nav() {
 	return (
-		<div tw=" flex flex-row bg-header">
+		<div tw="flex flex-row justify-between bg-header text-center p-7">
 			<h3>Logo</h3>
 
 			<ul tw="flex flex-row justify-end">
