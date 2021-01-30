@@ -1,6 +1,6 @@
 .steps {
 	display: flex;
-	justify-content: space-evenly;
+	justify-content: space-between;
 	flex-wrap: wrap;
 	padding: 3em;
 	margin: 0 auto;
@@ -10,11 +10,13 @@
 
 .steps img {
 	width: auto;
-	height: 300px;
+	height: 100px;
 	align-self: center;
+	margin: 0 auto;
 }
 
 .steps h1 {
+	text-align: left;
 	font-size: 3em;
 	align-self: center;
 	color: white;
@@ -23,14 +25,13 @@
 .steps ul {
 	display: flex;
 	flex-direction: column;
-	text-align: left;
+	text-align: right;
 }
 
 .steps ul li {
 	list-style-type: none;
 	font-size: 2em;
 	color: white;
-	margin: 1em 0;
 }
 
 .number-order {
