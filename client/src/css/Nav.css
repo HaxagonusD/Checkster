@@ -5,6 +5,7 @@
 	width: 100%;
 	margin: 0;
 	padding: 0;
+	transition: all 2s;
 }
 
 .nav h3 {
@@ -17,8 +18,8 @@
 	color: white;
 }
 .nav img {
-	height: 100px;
-	width: 100px;
+	height: 60px;
+	width: auto;
 }
 .nav ul,
 .nav img {
@@ -32,7 +33,11 @@
 .nav li {
 	list-style: none;
 	color: white;
-	margin: 0 2em;
+
+	padding: 1em;
+}
+.nav li:hover {
+	background: #034d7a;
 }
 
 .nav a {
