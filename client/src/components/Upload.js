@@ -4,7 +4,7 @@ import "../css/Upload.css";
 
 const Upload = () => {
 	const [file, setFile] = useState("");
-	const [filename, setfilename] = useState("chose file ");
+	const [filename, setfilename] = useState("");
 	const [upLoadingFile, setUpLoadingFile] = useState({});
 	const handelFile = (e) => {
 		setFile(e.target.files[0]);
@@ -35,8 +35,7 @@ const Upload = () => {
 			<form onSubmit={handleSumbit}>
 				<input type="file" onChange={handelFile} />
 				<label htmlFor="customFile"> {filename}</label>
-
-				<input type="submit" value="Sumbit" />
+				<input type="submit" value="Submit" />
 			</form>
 		</div>
 	);
