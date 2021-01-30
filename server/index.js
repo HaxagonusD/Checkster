@@ -1,7 +1,7 @@
 const express = require("express");
 const fileUpload = require("express-fileupload");
 const app = express();
-app.use(cors());
+// app.use(cors());
 app.use(fileUpload());
 
 /// Upload Endpoint
@@ -16,7 +16,7 @@ app.post("/upload", (req, res) => {
       console.log(err);
       return res.status(500).send(err);
     }
-    res.json({ fileName: file.name, filePath: `/upload/${fileName}` });
+    res.json({ fileName: file.name, filePath: `/uploads/${fileName}` });
   });
 });
 
