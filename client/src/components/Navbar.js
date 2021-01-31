@@ -29,7 +29,7 @@ function Navbar() {
 			<nav className="navbar">
 				<div className="navbar-container">
 					<Link to="/" className="navbar-logo" onClick={closeMobileMenu}>
-						CHECKSTER <i class="fas fa-money-check-alt"></i>
+						CHECKSTER <i className="fas fa-money-check-alt"></i>
 					</Link>
 					<div className="menu-icon" onClick={handleClick}>
 						<i className={click ? "fas fa-times" : "fas fa-bars"} />
@@ -56,7 +56,7 @@ function Navbar() {
 							</Link>
 						</li>
 					</ul>
-					{button && <Button buttonStyle="btn--outline">Results</Button>}
+					{button && <Button buttonStyle="btn--outline">Upload</Button>}
 				</div>
 			</nav>
 		</>
