@@ -1,5 +1,6 @@
 const express = require("express");
 const fileUpload = require("express-fileupload");
+const extractData = require("./helpers/extractData");
 const app = express();
 // app.use(cors());
 app.use(fileUpload());
@@ -11,15 +12,20 @@ app.post("/upload", (req, res) => {
   }
 
   const file = req.files.file;
+  const newLocation = `${__dirname}/uploads/${file.name}`;
 
-  file.mv(`${__dirname}/uploads/${file.name}`, (err) => {
+  file.mv(newLocation, (err) => {
     console.log(__dirname);
     if (err) {
       console.error(err);
       return res.status(500).send(err);
     }
 
-    res.json({ fileName: file.name, filePath: `/uploads/${file.name}` });
+    res.json({
+      fileName: file.name,
+      filePath: `/uploads/${file.name}`,
+      data: extractData(newLocation),
+    });
   });
 });
 
