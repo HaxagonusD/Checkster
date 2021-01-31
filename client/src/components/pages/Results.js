@@ -25,7 +25,7 @@ export default function Results() {
     formData.append("file", file);
 
     try {
-      const res = await axios.post("/upload", formData, {
+      const res = await axios.post("/results", formData, {
         headers: {
           "Content-Type": "multipart/form-data",
         },
@@ -40,6 +40,8 @@ export default function Results() {
           setTimeout(() => setUploadPercentage(0), 10000);
         },
       });
+
+      console.log(res);
 
       const { fileName, filePath } = res.data;
 
