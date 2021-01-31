@@ -29,6 +29,7 @@ app.post("/results", (req, res) => {
     });
   });
 });
+app.get("/file/:name", async (req, res) => {});
 
 app.listen(5000, () => {
   console.log("Listening on post 5000");
