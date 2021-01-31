@@ -16,9 +16,10 @@ async function extractData(filePath) {
   const text = detections.text;
   const amount = findAmountNumber(text);
   const date = findDate(text);
+  console.log(date);
   const wordsAmount = currencyToWords(amount);
   const valid = validateCheck(text);
-  return { amount, date, wordsAmount, valid };
+  return { amount, date, wordsAmount, valid, text };
 }
 
 module.exports = extractData;
