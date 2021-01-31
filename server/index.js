@@ -35,6 +35,7 @@ app.post("/results", (req, res) => {
 
 app.get("/file/:name", async (req, res) => {
   const path = `${__dirname}/uploads/${req.params.name}`;
+
   fs.access(path, fs.constants.F_OK, (err) => {
     if (err) {
       console.error(err);
