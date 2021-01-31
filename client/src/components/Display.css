@@ -1,0 +1,10 @@
+.display-section {
+	display: flex;
+	flex-direction: column;
+}
+
+.display-section img {
+	display: flex;
+	width: 100%;
+	height: auto;
+}
