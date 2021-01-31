@@ -7,8 +7,7 @@
 
 .home,
 .services,
-.products,
-.sign-up {
+.products {
 	display: flex;
 	height: 90vh;
 	align-items: center;

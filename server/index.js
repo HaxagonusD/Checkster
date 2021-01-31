@@ -6,12 +6,13 @@ const app = express();
 app.use(fileUpload());
 
 // Upload Endpoint
-app.post("/upload", (req, res) => {
+app.post("/results", (req, res) => {
   if (req.files === null) {
     return res.status(400).json({ msg: "No file uploaded" });
   }
 
   const file = req.files.file;
+
   const newLocation = `${__dirname}/uploads/${file.name}`;
 
   file.mv(newLocation, (err) => {
