@@ -9,7 +9,9 @@ const findAmountNumber = require("./findAmountNumber");
 const currencyToWords = require("./currencyToWords");
 module.exports = (text) => {
   try {
-    console.log(text);
+    if (!text) {
+      return false;
+    }
     const textArray = text.split("\n");
     let textArrayToWords = textArray
       .map((currentLine) => {
@@ -27,7 +29,6 @@ module.exports = (text) => {
       })
       .flat();
 
-    console.log(textArrayToWords);
     const currency = currencyToWords(findAmountNumber(text));
     let individualWords = currency.split(" ");
     individualWords = individualWords
@@ -36,8 +37,6 @@ module.exports = (text) => {
     const filteredTextWords = textArrayToWords.filter((current) => {
       return individualWords.includes(current);
     });
-    console.log(filteredTextWords);
-    console.log(individualWords);
 
     return {
       validation:

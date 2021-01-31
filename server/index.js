@@ -19,30 +19,20 @@ app.post("/results", (req, res) => {
   const newLocation = `${__dirname}/uploads/${file.name}`;
 
   file.mv(newLocation, (err) => {
-    console.log(__dirname);
+    console.log("/results", __dirname);
     if (err) {
       console.error(err);
       return res.status(500).send(err);
     }
-
-    res.json({
-      fileName: file.name,
-      filePath: `/uploads/${file.name}`,
-      data: extractData(newLocation),
-    });
-  });
-});
-
-app.get("/file/:name", async (req, res) => {
-  const path = `${__dirname}/uploads/${req.params.name}`;
-
-  fs.access(path, fs.constants.F_OK, (err) => {
-    if (err) {
-      console.error(err);
-      return res.status(404).send("Not Found!");
-    }
-    //file exists
-    res.sendFile(path);
+    (async () => {
+      let data = await extractData(newLocation);
+      console.log("Extracted data is here", data);
+      res.json({
+        fileName: file.name,
+        filePath: `/uploads/${file.name}`,
+        extractedData: data,
+      });
+    })();
   });
 });
 
