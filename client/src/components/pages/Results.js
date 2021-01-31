@@ -15,7 +15,7 @@ export default function Results() {
 
 	const handelFile = (e) => {
 		setFile(e.target.files[0]);
-		setFilename(e.target.files[0].name);
+		setFilename(e.target.files.name[0]);
 	};
 
 	const handelSumbit = async (e) => {
