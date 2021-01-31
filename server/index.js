@@ -1,9 +1,12 @@
 const express = require("express");
 const fileUpload = require("express-fileupload");
 const extractData = require("./helpers/extractData");
+const fs = require("fs");
 const app = express();
+const morgan = require("morgan");
 // app.use(cors());
 app.use(fileUpload());
+app.use(morgan("tiny"));
 
 // Upload Endpoint
 app.post("/results", (req, res) => {
@@ -29,8 +32,9 @@ app.post("/results", (req, res) => {
     });
   });
 });
+
 app.get("/file/:name", async (req, res) => {
-  const path = `./uploads/${req.params.name}`;
+  const path = `${__dirname}/uploads/${req.params.name}`;
   fs.access(path, fs.constants.F_OK, (err) => {
     if (err) {
       console.error(err);
