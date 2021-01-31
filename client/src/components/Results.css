@@ -72,6 +72,26 @@ input[type="submit"]:hover {
 	transition: 0.2s ease-in;
 }
 
+.message {
+	font-size: 20px;
+	color: red;
+}
+
+@media only screen and (max-width: 1094px) {
+	.upload-section {
+		width: 100%;
+	}
+	.display-section {
+		width: 100%;
+	}
+}
+
+@media only screen and (max-width: 600px) {
+	.upload-section {
+		font-size: 10px;
+	}
+}
+
 /* ; */
 /*
 .results {

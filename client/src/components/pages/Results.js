@@ -62,7 +62,7 @@ export default function Results() {
 					Get check image. Upload it. Click validate. <br />
 					Easy as one, two, three!
 				</p>
-				{message ? <Message msg={message} /> : null}
+
 				<form onSubmit={handelSumbit}>
 					<div>
 						<input type="file" id="customFile" onChange={handelFile} />
@@ -70,7 +70,7 @@ export default function Results() {
 					</div>
 
 					<Progress percentage={uploadPercentage} />
-
+					{message ? <Message msg={message} /> : null}
 					<input type="submit" value="Validate" />
 				</form>
 				{uploadedFile ? (
