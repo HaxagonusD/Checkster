@@ -7,22 +7,19 @@ import axios from "axios";
 import "../../App.css";
 
 export default function Results() {
-	const [file, setFile] = useState("");
-	const [filename, setFilename] = useState("");
-	const [uploadedFile, setUploadedFile] = useState({});
-	const [message, setMessage] = useState("");
-	const [uploadPercentage, setUploadPercentage] = useState(0);
 
-	const handelFile = (e) => {
-		setFile(e.target.files[0]);
-		setFilename(e.target.files[0].name);
-	};
+  const [file, setFile] = useState("");
+  const [filename, setFilename] = useState("");
+  const [uploadedFile, setUploadedFile] = useState({});
+  const [message, setMessage] = useState("");
+  const [uploadPercentage, setUploadPercentage] = useState(0);
 
-	const handelSumbit = async (e) => {
-		e.preventDefault();
-		const formData = new FormData();
-		formData.append("file", file);
+  const handelFile = (e) => {
+    setFile(e.target.files[0]);
+    setFilename(e.target.files[0].name);
+  };
 
+<<<<<<< HEAD
 		try {
 			const res = await axios.post("/results", formData, {
 				headers: {
@@ -36,21 +33,36 @@ export default function Results() {
 				},
 			});
 			console.log(res);
+=======
+  const handelSumbit = async (e) => {
+    e.preventDefault();
+    const formData = new FormData();
+    formData.append("file", file);
 
-			const { fileName, filePath } = res.data;
+    try {
+      const res = await axios.post("/results", formData, {
+        headers: {
+          "Content-Type": "multipart/form-data",
+        },
+        onUploadProgress: (progressEvent) => {
+          setUploadPercentage(
+            parseInt(
+              Math.round((progressEvent.loaded * 100) / progressEvent.total)
+            )
+          );
+>>>>>>> main
 
-			setUploadedFile({ fileName, filePath });
+          // Clear percentage
+          setTimeout(() => setUploadPercentage(0), 10000);
+        },
+      });
+      console.log(res);
 
-			setMessage("File Uploaded");
-		} catch (err) {
-			if (err.response.status === 500) {
-				setMessage("There was a problem with the server");
-			} else {
-				setMessage(err.response.data.msg);
-			}
-		}
-	};
+      const { fileName, filePath } = res.data;
 
+      setUploadedFile({ fileName, filePath });
+
+<<<<<<< HEAD
 	return (
 		<div className="results">
 			{message ? <Message msg={message} /> : null}
@@ -59,9 +71,28 @@ export default function Results() {
 					<input type="file" id="customFile" onChange={handelFile} />
 					<label htmlFor="customFile">{filename}</label>
 				</div>
+=======
+      setMessage("File Uploaded");
+    } catch (err) {
+      if (err.response.status === 500) {
+        setMessage("There was a problem with the server");
+      } else {
+        setMessage(err.response.data.msg);
+      }
+    }
+  };
+>>>>>>> main
 
-				<Progress percentage={uploadPercentage} />
+  return (
+    <div className="results">
+      {message ? <Message msg={message} /> : null}
+      <form onSubmit={handelSumbit}>
+        <div>
+          <input type="file" id="customFile" onChange={handelFile} />
+          <label htmlFor="customFile">{filename}</label>
+        </div>
 
+<<<<<<< HEAD
 				<input type="submit" value="Validate" />
 			</form>
 			{uploadedFile ? (
@@ -75,4 +106,25 @@ export default function Results() {
 			{uploadedFile.filePath}
 		</div>
 	);
+=======
+        <Progress percentage={uploadPercentage} />
+
+        <input type="submit" value="Validate" />
+      </form>
+      {uploadedFile ? (
+        <div>
+          <div>
+            <h3 className="text-center">{uploadedFile.fileName}</h3>
+            <img
+              style={{ width: "200px" }}
+              src={uploadedFile.filePath}
+              alt=""
+            />
+          </div>
+        </div>
+      ) : null}
+      {uploadedFile.filePath}
+    </div>
+  );
+>>>>>>> main
 }

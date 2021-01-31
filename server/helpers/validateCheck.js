@@ -39,11 +39,13 @@ module.exports = (text) => {
     console.log(filteredTextWords);
     console.log(individualWords);
 
-    return (
-      JSON.stringify(individualWords) === JSON.stringify(filteredTextWords)
-    );
+    return {
+      validation:
+        JSON.stringify(individualWords) === JSON.stringify(filteredTextWords),
+      error: false,
+    };
   } catch (error) {
     console.error(error);
-    return false;
+    return { error, validation: false };
   }
 };

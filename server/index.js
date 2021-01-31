@@ -7,7 +7,7 @@ app.use(fileUpload());
 
 // Upload Endpoint
 app.post("/results", (req, res) => {
-  if (req.files === null) {
+  if (!req.files) {
     return res.status(400).json({ msg: "No file uploaded" });
   }
 
@@ -27,6 +27,17 @@ app.post("/results", (req, res) => {
       filePath: `/uploads/${file.name}`,
       data: extractData(newLocation),
     });
+  });
+});
+app.get("/file/:name", async (req, res) => {
+  const path = `./uploads/${req.params.name}`;
+  fs.access(path, fs.constants.F_OK, (err) => {
+    if (err) {
+      console.error(err);
+      return res.status(404).send("Not Found!");
+    }
+    //file exists
+    res.sendFile(path);
   });
 });
 
