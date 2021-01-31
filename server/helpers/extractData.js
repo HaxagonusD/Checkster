@@ -19,7 +19,7 @@ async function extractData(filePath) {
   console.log(date);
   const wordsAmount = currencyToWords(amount);
   const valid = validateCheck(text);
-  return { amount, date, wordsAmount, valid };
+  return { amount, date, wordsAmount, valid, text };
 }
 
 module.exports = extractData;
