@@ -19,7 +19,7 @@
 }
 
 .footer-subscription > p {
-	font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+	font-family: "Spartan", sans-serif;
 }
 
 .footer-subscription-heading {
@@ -65,6 +65,7 @@
 }
 
 .footer-link-items h2 {
+	font-family: "Spartan", sans-serif;
 	margin-bottom: 16px;
 }
 
@@ -76,6 +77,7 @@
 	color: #fff;
 	text-decoration: none;
 	margin-bottom: 0.5rem;
+	letter-spacing: 1.2px;
 }
 
 .footer-link-items a:hover {
@@ -119,6 +121,7 @@
 }
 
 .social-logo {
+	font-family: "Spartan", sans-serif;
 	color: #fff;
 	justify-self: start;
 	margin-left: 20px;

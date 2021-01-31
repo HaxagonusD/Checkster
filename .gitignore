@@ -3,6 +3,7 @@
 **/.env
 **/authentication.json
 **/server/uploads
+**/client/.eslistcache
 # dependencies
 client/node_modules
 /.pnp
