@@ -18,7 +18,7 @@ async function extractData(filePath) {
   const date = findDate(text);
   const wordsAmount = currencyToWords(amount);
   const valid = validateCheck(text);
-  return { amound, date, wordsAmount, valid };
+  return { amount, date wordsAmount, valid };
 }
 
 module.exports = extractData;
