@@ -23,7 +23,19 @@ export default function Results() {
 		const formData = new FormData();
 		formData.append("file", file);
 
-		try {
+
+    try {
+      const res = await axios.post("/results", formData, {
+        headers: {
+          "Content-Type": "multipart/form-data",
+        },
+        onUploadProgress: (progressEvent) => {
+          setUploadPercentage(
+            parseInt(
+              Math.round((progressEvent.loaded * 100) / progressEvent.total)
+            )
+          );
+	try {
 			const res = await axios.post("/upload", formData, {
 				headers: {
 					"Content-Type": "multipart/form-data",
@@ -31,12 +43,19 @@ export default function Results() {
 				onUploadProgress: (progressEvent) => {
 					setUploadPercentage(parseInt(Math.round((progressEvent.loaded * 100) / progressEvent.total)));
 
+
 					// Clear percentage
 					setTimeout(() => setUploadPercentage(0), 10000);
 				},
 			});
 
+
+      console.log(res);
+
+      const { fileName, filePath } = res.data;
+
 			const { fileName, filePath } = res.data;
+
 
 			setUploadedFile({ fileName, filePath });
 
