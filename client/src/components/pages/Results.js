@@ -24,7 +24,7 @@ export default function Results() {
 		formData.append("file", file);
 
 		try {
-			const res = await axios.post("/upload", formData, {
+			const res = await axios.post("/results", formData, {
 				headers: {
 					"Content-Type": "multipart/form-data",
 				},
@@ -35,6 +35,7 @@ export default function Results() {
 					setTimeout(() => setUploadPercentage(0), 10000);
 				},
 			});
+			console.log(res);
 
 			const { fileName, filePath } = res.data;
 
@@ -52,7 +53,6 @@ export default function Results() {
 
 	return (
 		<div className="results">
-			<img src="https://www.svgrepo.com/show/99206/analyze.svg" alt="analysis" height="100px" width="auto" />
 			{message ? <Message msg={message} /> : null}
 			<form onSubmit={handelSumbit}>
 				<div>
@@ -68,10 +68,11 @@ export default function Results() {
 				<div>
 					<div>
 						<h3 className="text-center">{uploadedFile.fileName}</h3>
-						<img style={{ width: "100%" }} src={uploadedFile.filePath} alt="" />
+						<img style={{ width: "200px" }} src={uploadedFile.filePath} alt="" />
 					</div>
 				</div>
 			) : null}
+			{uploadedFile.filePath}
 		</div>
 	);
 }
