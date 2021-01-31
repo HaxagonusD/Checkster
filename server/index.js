@@ -29,7 +29,17 @@ app.post("/results", (req, res) => {
     });
   });
 });
-app.get("/file/:name", async (req, res) => {});
+app.get("/file/:name", async (req, res) => {
+  const path = `./uploads/${req.params.name}`;
+  fs.access(path, fs.constants.F_OK, (err) => {
+    if (err) {
+      console.error(err);
+      return res.status(404).send("Not Found!");
+    }
+    //file exists
+    res.sendFile(path);
+  });
+});
 
 app.listen(5000, () => {
   console.log("Listening on post 5000");
