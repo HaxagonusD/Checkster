@@ -8,8 +8,8 @@ function Footer() {
     <div className="footer-container">
       <section className="footer-subscription">
         <p className="footer-subscription-heading">
-          Join our CheckLyst newsletter to receive our newsest offers, updates
-          and deals
+          Join our Checkster newsletter to receive our newsest offers, updates
+          and deals!
         </p>
         <p className="footer-subscription-text">
           You can unsubscribe at any time.
@@ -30,7 +30,7 @@ function Footer() {
         <div className="footer-link-wrapper">
           <div class="footer-link-items">
             <h2>About Us</h2>
-            <Link to="/sign-up">How it works</Link>
+            <Link to="/sign-up">How It Works</Link>
             <Link to="/">Testimonials</Link>
             <Link to="/">Careers</Link>
             <Link to="/">Investors</Link>
@@ -50,7 +50,7 @@ function Footer() {
             <Link to="/">Submit Video</Link>
             <Link to="/">Ambassadors</Link>
             <Link to="/">Agency</Link>
-            <Link to="/">Influencer</Link>
+            <Link to="/">Influencers</Link>
           </div>
           <div class="footer-link-items">
             <h2>Social Media</h2>
@@ -65,11 +65,11 @@ function Footer() {
         <div class="social-media-wrap">
           <div class="footer-logo">
             <Link to="/" className="social-logo">
-              READ THEM CHECKS
+              Checkster
               <i class="fas fa-money-check-alt"></i>
             </Link>
           </div>
-          <small class="website-rights">READ THEM CHECKS © 2021</small>
+          <small class="website-rights">Checkster © 2021</small>
           <div class="social-icons">
             <Link
               class="social-icon-link facebook"
