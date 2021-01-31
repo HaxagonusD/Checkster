@@ -1,0 +1,19 @@
+.results {
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+	justify-content: center;
+}
+
+.results form {
+	margin: 3em auto;
+	display: flex;
+	align-self: center;
+	flex-direction: column;
+	font-size: 1.5em;
+}
+
+.results input {
+	font-size: 1em;
+	padding: 0.5em;
+}
