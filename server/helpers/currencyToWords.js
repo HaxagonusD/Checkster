@@ -1,6 +1,6 @@
 const converter = require("number-to-words");
 module.exports = (currencyString) => {
-  const noDollarSignString = currencyString.replace(/\$\s+/, "");
+  const noDollarSignString = currencyString.replace(/\$\s*?/, "");
   const withDecimal = Number(noDollarSignString);
   const noDecimal = Math.trunc(withDecimal);
   let justDecimal = withDecimal - Math.floor(withDecimal);
