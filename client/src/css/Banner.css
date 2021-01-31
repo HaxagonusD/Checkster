@@ -1,0 +1,28 @@
+.banner {
+	background: url("../img/bank.jpg");
+	background-size: cover;
+	height: 80vh;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	align-items: center;
+}
+
+.banner h1 {
+	font-size: 3em;
+	color: white;
+	filter: drop-shadow(0 0.2rem 0.25rem rgb(0, 0, 0));
+}
+
+.banner h2 {
+	color: white;
+	filter: drop-shadow(0 0.2rem 0.25rem rgb(0, 0, 0));
+}
+
+.banner h4 {
+	font-size: 1em;
+	color: white;
+	font-weight: 100;
+	filter: drop-shadow(0 0.2rem 0.25rem rgb(0, 0, 0));
+}

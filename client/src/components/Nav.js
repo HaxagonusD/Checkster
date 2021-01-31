@@ -1,18 +1,22 @@
-/** @jsxImportSource @emotion/react */
-import tw from "twin.macro";
 import { Link } from "react-router-dom";
+import "../css/Nav.css";
 
 export default function Nav() {
 	return (
-		<div tw=" flex flex-row bg-header">
-			<h3>Logo</h3>
-
-			<ul tw="flex flex-row justify-end">
+		<div className="nav">
+			<h1>
+				<img src="https://www.svgrepo.com/show/54423/check.svg" alt="check image" />
+				Read-them-Checks
+			</h1>
+			<ul>
 				<Link to="/">
-					<li tw="mx-8">Home</li>
+					<li>Home</li>
 				</Link>
-				<Link tw="mx-8" to="/about">
+				<Link to="/about">
 					<li>About</li>
+				</Link>
+				<Link to="/results">
+					<li>Results</li>
 				</Link>
 			</ul>
 		</div>

@@ -1,9 +1,12 @@
-import React from "react";
+import "../css/Banner.css";
+import Upload from "./Upload";
 
 export default function Banner() {
 	return (
-		<div>
-			<h1>Hello from Banner</h1>
+		<div className="banner">
+			<h1>Reading checks. Made easy</h1>
+			<h4>upload a check image to begin</h4>
+			<Upload />
 		</div>
 	);
 }
