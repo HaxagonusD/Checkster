@@ -1,8 +1,35 @@
+@import url("https://fonts.googleapis.com/css2?family=Yantramanav:wght@300;400&display=swap");
+
 .results {
 	display: flex;
 	flex-direction: column;
 	text-align: center;
 	justify-content: center;
+}
+
+.results img {
+	margin-top: 2em;
+}
+
+.results input,
+.results label {
+	font-family: "Arial";
+}
+
+.results input[type="submit"] {
+	border: none;
+	outline: none;
+	padding: 1em;
+	width: 50%;
+	margin: 2em auto;
+}
+
+.results input[type="submit"]:hover {
+	border-radius: 0px;
+	background: #023e8a;
+	color: white;
+	cursor: pointer;
+	filter: drop-shadow(0.05em 0.1rem 0.25rem rgb(0, 0, 0));
 }
 
 .results form {

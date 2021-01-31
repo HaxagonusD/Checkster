@@ -23,19 +23,7 @@ export default function Results() {
 		const formData = new FormData();
 		formData.append("file", file);
 
-
-    try {
-      const res = await axios.post("/results", formData, {
-        headers: {
-          "Content-Type": "multipart/form-data",
-        },
-        onUploadProgress: (progressEvent) => {
-          setUploadPercentage(
-            parseInt(
-              Math.round((progressEvent.loaded * 100) / progressEvent.total)
-            )
-          );
-	try {
+		try {
 			const res = await axios.post("/upload", formData, {
 				headers: {
 					"Content-Type": "multipart/form-data",
@@ -43,19 +31,12 @@ export default function Results() {
 				onUploadProgress: (progressEvent) => {
 					setUploadPercentage(parseInt(Math.round((progressEvent.loaded * 100) / progressEvent.total)));
 
-
 					// Clear percentage
 					setTimeout(() => setUploadPercentage(0), 10000);
 				},
 			});
 
-
-      console.log(res);
-
-      const { fileName, filePath } = res.data;
-
 			const { fileName, filePath } = res.data;
-
 
 			setUploadedFile({ fileName, filePath });
 
@@ -71,6 +52,7 @@ export default function Results() {
 
 	return (
 		<div className="results">
+			<img src="https://www.svgrepo.com/show/99206/analyze.svg" alt="analysis" height="100px" width="auto" />
 			{message ? <Message msg={message} /> : null}
 			<form onSubmit={handelSumbit}>
 				<div>
