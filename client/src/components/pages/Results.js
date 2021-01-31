@@ -7,6 +7,7 @@ import axios from "axios";
 import "../../App.css";
 
 export default function Results() {
+
   const [file, setFile] = useState("");
   const [filename, setFilename] = useState("");
   const [uploadedFile, setUploadedFile] = useState({});
