@@ -50,7 +50,6 @@ function Navbar() {
 								Products
 							</Link>
 						</li>
-
 						<li>
 							<Link to="/results" className="nav-links-mobile" onClick={closeMobileMenu}>
 								Results
