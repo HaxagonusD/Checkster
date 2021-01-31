@@ -52,27 +52,40 @@ export default function Results() {
 	};
 
 	return (
-		<div className="results">
-			{message ? <Message msg={message} /> : null}
-			<form onSubmit={handelSumbit}>
-				<div>
-					<input type="file" id="customFile" onChange={handelFile} />
-					<label htmlFor="customFile">{filename}</label>
-				</div>
-
-				<Progress percentage={uploadPercentage} />
-
-				<input type="submit" value="Validate" />
-			</form>
-			{uploadedFile ? (
-				<div>
+		<div className="results-container">
+			<div className="upload-section">
+				<h2>
+					You click a few buttons. <br />
+					<span className="number-order">We'll handle the rest.</span>
+				</h2>
+				<p className="steps">
+					Get check image. Upload it. Click validate. <br />
+					Easy as one, two, three!
+				</p>
+				{message ? <Message msg={message} /> : null}
+				<form onSubmit={handelSumbit}>
 					<div>
-						<h3 className="text-center">{uploadedFile.fileName}</h3>
-						<img style={{ width: "200px" }} src={uploadedFile.filePath} alt="" />
+						<input type="file" id="customFile" onChange={handelFile} />
+						<label htmlFor="customFile">{filename}</label>
 					</div>
-				</div>
-			) : null}
-			{uploadedFile.filePath}
+
+					<Progress percentage={uploadPercentage} />
+
+					<input type="submit" value="Validate" />
+				</form>
+				{uploadedFile ? (
+					<div>
+						<div>
+							<h3 className="text-center">{uploadedFile.fileName}</h3>
+							<img style={{ width: "200px" }} src={uploadedFile.filePath} alt="" />
+						</div>
+					</div>
+				) : null}
+				{uploadedFile.filePath}
+			</div>
+			<div className="display-section">
+				<h1>Hello</h1>
+			</div>
 		</div>
 	);
 }
