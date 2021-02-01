@@ -27,7 +27,13 @@
 }
 
 .avatar .role h3 {
-	margin-top: 0.5rem;
+	margin: 0.5em;
+}
+
+.role a {
+	font-size: 1.5em;
+	margin: 1em 1em;
+	color: #023e8a;
 }
 
 /* purpose */
