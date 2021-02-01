@@ -52,7 +52,7 @@ function Navbar() {
 						</li>
 						<li>
 							<Link to="/results" className="nav-links-mobile" onClick={closeMobileMenu}>
-								Results
+								Upload
 							</Link>
 						</li>
 					</ul>
