@@ -14,7 +14,7 @@ export default function Results() {
 	const [uploadedFile, setUploadedFile] = useState({});
 	const [message, setMessage] = useState("");
 	const [uploadPercentage, setUploadPercentage] = useState(0);
-	const [imageURL, setImageURL] = useState("");
+	const [imageURL, setImageURL] = useState("https://i.imgur.com/IOZyNYf.png");
 	const [displayInfo, setDisplayInfo] = useState("");
 
 	const handelFile = (e) => {
@@ -59,7 +59,7 @@ export default function Results() {
 		}
 	};
 
-	console.log(displayInfo?.data?.extractedData, "display info");
+	console.log(displayInfo?.data, "display info");
 
 	return (
 		<div className="results-container">
@@ -83,22 +83,33 @@ export default function Results() {
 
 					<input type="submit" value="Validate" />
 				</form>
-				{uploadedFile ? (
-					<div>
-						<div>
-							<h3 className="text-center">{uploadedFile.fileName}</h3>
-							<img style={{ width: "200px" }} src={uploadedFile.filePath} alt="" />
-						</div>
-					</div>
-				) : null}
-				{uploadedFile.filePath}
 			</div>
 			<div className="display-section">
-				<img alt="Uploaded File" src={imageURL} width="600" height="600" />
-				<div>{/* <h3>{}</h3>
-					<h3>{}</h3>
-					<h3>{}</h3>
-					<h3>{}</h3> */}</div>
+				<img src={imageURL} width="600" height="600" />
+				{displayInfo ? (
+					<div className="info">
+						<p>
+							<span className="info-subhead"> Amount:</span>&ensp; {displayInfo?.data?.extractedData?.amount}
+						</p>
+						<p>
+							<span className="info-subhead"> Amount in Words:</span>&ensp; {displayInfo?.data?.extractedData?.wordsAmount}
+						</p>
+						<p>
+							<span className="info-subhead"> Date:</span>&ensp; {displayInfo?.data?.extractedData?.date}
+						</p>
+						<p>
+							<span className="info-subhead"> Validation:</span>&ensp;
+							{displayInfo?.data?.extractedData?.valid?.validation ? "Valid" : "Invalid"}
+						</p>
+						<p>
+							<span className="info-subhead">Data:</span>&ensp;{displayInfo?.data?.extractedData?.text}
+						</p>
+					</div>
+				) : (
+					<div>
+						<h1>Your information will show up here</h1>
+					</div>
+				)}
 			</div>
 		</div>
 	);

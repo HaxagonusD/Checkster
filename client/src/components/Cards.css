@@ -5,7 +5,7 @@
 
 h1 {
 	text-align: center;
-	font-family: "Spartan", sans-serif;
+	/* font-family: "Spartan", sans-serif; */
 }
 
 .cards__container {
@@ -95,7 +95,7 @@ h1 {
 }
 
 .cards__item__text {
-	font-family: "Spartan", sans-serif;
+	/* font-family: "Spartan", sans-serif; */
 	color: #252e48;
 	font-size: 18px;
 	line-height: 24px;

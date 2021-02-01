@@ -19,7 +19,7 @@
 }
 
 .footer-subscription > p {
-	font-family: "Spartan", sans-serif;
+	/* font-family: "Spartan", sans-serif; */
 }
 
 .footer-subscription-heading {
@@ -65,7 +65,7 @@
 }
 
 .footer-link-items h2 {
-	font-family: "Spartan", sans-serif;
+	/* font-family: "Spartan", sans-serif; */
 	margin-bottom: 16px;
 }
 
@@ -121,7 +121,7 @@
 }
 
 .social-logo {
-	font-family: "Spartan", sans-serif;
+	/* font-family: "Spartan", sans-serif; */
 	color: #fff;
 	justify-self: start;
 	margin-left: 20px;
