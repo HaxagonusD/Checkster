@@ -1,14 +1,16 @@
 const express = require("express");
-// const fileUpload = require("express-fileupload");
+const fileUpload = require("express-fileupload");
 const extractData = require("./helpers/extractData");
-// const fs = require("fs");
+const fs = require("fs");
 const app = express();
 const cors = require("cors");
+const morgan = require("morgan");
+app.use(morgan("tiny"));
 app.use(cors());
-// app.use(fileUpload());
+app.use(fileUpload());
 
 // Upload Endpoint
-app.get("/results/:name", (req, res) => {
+app.post("/results", (req, res) => {
   if (!req.files) {
     return res.status(400).json({ msg: "No file uploaded" });
   }
@@ -41,4 +43,3 @@ app.get("/test", (req, res) => {
 app.listen(5000, () => {
   console.log("Listening on post 5000");
 });
-module.exports = app;

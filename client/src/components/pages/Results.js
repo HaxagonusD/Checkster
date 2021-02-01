@@ -105,12 +105,13 @@ export default function Results() {
 							{displayInfo?.data?.extractedData?.valid?.validation ? "Valid" : "Invalid"}
 						</p>
 						<p>
-							<span className="info-subhead">Data:</span>&ensp;{displayInfo?.data?.extractedData?.text}
+							<span className="info-subhead">Data:</span>&ensp;
+							{displayInfo?.data?.extractedData?.text}
 						</p>
 					</div>
 				) : (
 					<div className="info-placeholder">
-						<h3>Your information will show up here after clicking Extract</h3>
+						<h3>Your information will show up here after clicking validating</h3>
 					</div>
 				)}
 			</div>
