@@ -53,13 +53,12 @@ export default function Team() {
 			<h1>Purpose</h1>
 			<div className="purpose">
 				<p>
-					Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tenetur nisi eveniet quo sit repellat optio labore sint blanditiis. Nemo
-					labore maiores commodi omnis ullam eligendi dolorum dolore, asperiores praesentium rem?
+					We approached the Citi Technology x Virtual Hackathon with the intention of leveling up on our technical skills that we are
+					actively learning in an intensive web development fellowship. We strategically chose to work on the problem of automating the
+					digitization of handwritten checks because we were excited for the challenge of having an opportunity to implement Google Vision
+					API in our technical solution.
 				</p>
-				<p>
-					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere autem dicta iure sapiente architecto mollitia voluptates earum,
-					excepturi sint aspernatur velit? Amet distinctio corrupti minima velit et quaerat rem maiores?
-				</p>
+				<p>This experience aligns with our personal ambitions as software engineers, front and backend engineers, and UI/UX engineers.</p>
 			</div>
 		</div>
 	);
