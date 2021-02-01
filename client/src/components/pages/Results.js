@@ -97,7 +97,7 @@ export default function Results() {
         {uploadedFile.filePath}
       </div>
       <div className="display-section">
-        <h1>Hello</h1>
+        <h1>View Check Below</h1>
         <img alt="Uploaded File" src={imageURL} width="600" height="600" />
       </div>
     </div>
