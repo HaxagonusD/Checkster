@@ -7,7 +7,7 @@ function HeroSection() {
 	return (
 		<div className="hero-container">
 			<video src="/videos/money.mp4" autoPlay loop muted />
-			<h1>Reading checks. Made easy</h1>
+			<h1>Reading checks. Made easy.</h1>
 			<p>Upload a check image to begin</p>
 			<div className="hero-btns">
 				<Button className="btns" buttonStyle="btn--outline" buttonSize="btn--large">
