@@ -13,5 +13,7 @@ module.exports = (currencyString) => {
   justDecimal = justDecimal.toFixed(2);
   const noDecimalWords = converter.toWords(noDecimal);
   const justDecimalWords = converter.toWords(justDecimal * 100);
-  return `${noDecimalWords} ${justDecimal != 0 ? justDecimalWords : ""}`;
+  return `${noDecimalWords} dollars ${
+    justDecimal != 0 ? justDecimalWords + " cents" : ""
+  }`;
 };
