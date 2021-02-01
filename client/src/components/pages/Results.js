@@ -92,13 +92,16 @@ export default function Results() {
 				{displayInfo ? (
 					<div className="info">
 						<p>
-							<span className="info-subhead"> Amount:</span>&ensp; {displayInfo?.data?.extractedData?.amount}
+							<span className="info-subhead"> Amount:</span>&ensp;{" "}
+							{displayInfo?.data?.extractedData?.amount ? displayInfo?.data?.extractedData?.amount : "Not detected"}
 						</p>
 						<p>
-							<span className="info-subhead"> Amount in Words:</span>&ensp; {displayInfo?.data?.extractedData?.wordsAmount}
+							<span className="info-subhead"> Amount in Words:</span>&ensp;{" "}
+							{displayInfo?.data?.extractedData?.wordsAmount ? displayInfo?.data?.extractedData?.wordsAmount : "Not detected"}
 						</p>
 						<p>
-							<span className="info-subhead"> Date:</span>&ensp; {displayInfo?.data?.extractedData?.date}
+							<span className="info-subhead"> Date:</span>&ensp;{" "}
+							{displayInfo?.data?.extractedData?.date ? displayInfo?.data?.extractedData?.date : "Not detected"}
 						</p>
 						<p>
 							<span className="info-subhead"> Validation:</span>&ensp;
@@ -111,7 +114,7 @@ export default function Results() {
 					</div>
 				) : (
 					<div className="info-placeholder">
-						<h3>Your information will show up here after clicking validating</h3>
+						<h3>Your information will show up here after clicking 'Extract'</h3>
 					</div>
 				)}
 			</div>
