@@ -1,4 +1,7 @@
+@import url("https://fonts.googleapis.com/css2?family=Sniglet:wght@800&display=swap");
+
 * {
+	font-family: "Sniglet", cursive;
 	box-sizing: border-box;
 	margin: 0;
 	padding: 0;
@@ -6,9 +9,7 @@
 }
 
 .home,
-.services,
-.products,
-.sign-up {
+.services {
 	display: flex;
 	height: 90vh;
 	align-items: center;
@@ -18,19 +19,10 @@
 
 .services {
 	background-image: url("./components/images/img-2.jpg");
+	filter: drop-shadow(0.05em 0.1rem 0.25rem rgb(0, 0, 0));
 	box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.2);
 	background-position: center;
 	background-size: cover;
-	background-repeat: no-repeat;
-	color: #fff;
-	font-size: 100px;
-}
-
-.products {
-	background-image: url("./components/images/img-8.jpg");
-	box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.2);
-	background-position: center;
-	background-size: fill;
 	background-repeat: no-repeat;
 	color: #fff;
 	font-size: 100px;

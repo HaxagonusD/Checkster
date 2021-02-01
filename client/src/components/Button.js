@@ -1,45 +1,21 @@
-// import React from 'react';
-// import './Button.css';
-// import { Link } from 'react-router-dom';
+import React from "react";
+import "./Button.css";
+import { Link } from "react-router-dom";
 
-// export function Button() {
-//   return (
-//     <Link to='sign-up'>
-//       <button className='btn'>Sign Up</button>
-//     </Link>
-//   );
-// }
+const STYLES = ["btn--primary", "btn--outline", "btn--test"];
 
-import React from 'react';
-import './Button.css';
-import { Link } from 'react-router-dom';
+const SIZES = ["btn--medium", "btn--large"];
 
-const STYLES = ['btn--primary', 'btn--outline', 'btn--test'];
+export const Button = ({ children, type, onClick, buttonStyle, buttonSize }) => {
+	const checkButtonStyle = STYLES.includes(buttonStyle) ? buttonStyle : STYLES[0];
 
-const SIZES = ['btn--medium', 'btn--large'];
+	const checkButtonSize = SIZES.includes(buttonSize) ? buttonSize : SIZES[0];
 
-export const Button = ({
-  children,
-  type,
-  onClick,
-  buttonStyle,
-  buttonSize
-}) => {
-  const checkButtonStyle = STYLES.includes(buttonStyle)
-    ? buttonStyle
-    : STYLES[0];
-
-  const checkButtonSize = SIZES.includes(buttonSize) ? buttonSize : SIZES[0];
-
-  return (
-    <Link to='/sign-up' className='btn-mobile'>
-      <button
-        className={`btn ${checkButtonStyle} ${checkButtonSize}`}
-        onClick={onClick}
-        type={type}
-      >
-        {children}
-      </button>
-    </Link>
-  );
+	return (
+		<Link to="/results" className="btn-mobile">
+			<button className={`btn ${checkButtonStyle} ${checkButtonSize}`} onClick={onClick} type={type}>
+				{children}
+			</button>
+		</Link>
+	);
 };
