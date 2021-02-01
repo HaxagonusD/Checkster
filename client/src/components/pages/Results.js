@@ -6,6 +6,8 @@ import Message from "../Message";
 import Progress from "../Message";
 import axios from "axios";
 
+import checkPlaceholder from "../images/checkPlaceholder.png";
+
 import "../../App.css";
 
 export default function Results() {
@@ -14,7 +16,7 @@ export default function Results() {
 	const [uploadedFile, setUploadedFile] = useState({});
 	const [message, setMessage] = useState("");
 	const [uploadPercentage, setUploadPercentage] = useState(0);
-	const [imageURL, setImageURL] = useState("https://i.imgur.com/IOZyNYf.png");
+	const [imageURL, setImageURL] = useState(checkPlaceholder);
 	const [displayInfo, setDisplayInfo] = useState("");
 
 	const handelFile = (e) => {
