@@ -19,7 +19,7 @@
 <br />
 <p align="center">
   <a href="https://github.com/HaxagonusD/Get-Them-Checks">
-    <img src="images/logo.png" alt="Logo" width="80" height="80">
+    <img src="images/../client/src/components/images/readMeBanner.png" alt="Logo">
   </a>
 
   <h1 align="center">Checkster</h1>
@@ -30,7 +30,7 @@
     <a href="https://github.com/HaxagonusD/Get-Them-Checks"><strong>🔍Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="https://github.com/HaxagonusD/Get-Them-Checks">👀 View Demo</a>
+    <a href="https://drive.google.com/file/d/19d-jW-OWbmJs9IbzI-d6IqU58TS1DkR2/view?usp=sharing">👀 View Demo</a>
     ·
     <a href="https://github.com/HaxagonusD/Get-Them-Checks">🐛Report Bug</a>
     ·
@@ -45,6 +45,8 @@
   <summary>Table of Contents</summary>
   <ol>
     <li>
+      <a href="#installation">Installation</a>
+      <li>
       <a href="#inspiration">Inspiration</a>
       <ul>
         <li><a href="#what-it-does">What It Does</a></li>
@@ -69,56 +71,80 @@
 
 
 <!-- ABOUT THE PROJECT -->
+### Authentication
+
+1. Get a free API Key at [https://cloud.google.com](https://cloud.google.com/vision/docs/setup)
+2. Clone the repo
+   ```sh
+   git clone https://github.com/HaxagonusD/Get-Them-Checks.git
+   ```
+3. Install NPM packages
+   ```sh
+   npm install
+   ```
+4. Make an `authentication.JSON` from Google Cloud Service Account
+  
+5. Place the `authentication.JSON` in the server folder.
+6. NPM Start
+    ```sh
+    cd into `client` && npm start
+    ```
+9. Server
+    ```sh
+    cd into server && `nodemon` `app.js`
+    ```
+
 ## Inspiration 
-
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
-
-There are many great README templates available on GitHub, however, I didn't find one that really suit my needs so I created this enhanced one. I want to create a README template so amazing that it'll be the last one you ever need -- I think this is it.
-
-Here's why:
-* Your time should be focused on creating something amazing. A project that solves a problem and helps others
-* You shouldn't be doing the same tasks over and over like creating a README from scratch
-* You should element DRY principles to the rest of your life :smile:
 
 ## What It Does 
 
-Of course, no one template will serve all projects since your needs may be different. So I'll be adding more in the near future. You may also suggest changes by forking this repo and creating a pull request or opening an issue. Thanks to all the people have have contributed to expanding this template!
+Checkster is a mobile responsive web application that allows users to upload handwritten checks, and with the power of AI, have their checks digitized and validated.  The project was built to solve the automation of handwritten checks in the banking industry.
 
+
+ <a href="https://github.com/HaxagonusD/Get-Them-Checks">
+    <img src="images/../client/src/components/images/ChecksterDesktop.png" alt="Logo">
+  </a>
+
+We approached the Citi Technology x Virtual Hackathon with the intention of leveling up on our technical skills that we are actively learning  in an intensive web development fellowship.  We strategically chose to work on the problem of automating the digitization of handwritten checks because we were excited for the challenge of having an opportunity to implement Google Vision API in our technical solution.
+
+This experience aligns with our personal ambitions as software engineers, front and backend engineers, and UI/UX engineers.
+
+ <a href="https://github.com/HaxagonusD/Get-Them-Checks">
+    <img src="images/../client/src/components/images/ChecksterMobile.png" alt="Logo">
+  </a>
 
 ## How We Built It 
 
-Of course, no one template will serve all projects since your needs may be different. So I'll be adding more in the near future. You may also suggest changes by forking this repo and creating a pull request or opening an issue. Thanks to all the people have have contributed to expanding this template!
-
+This project was conceptualized by building wireframes and prototypes using Figma. We then built our project over 48 hours using React JS, JavaScript and CSS on the frontend, and utilized Node, Express JS and Cloud Vision API on the backend. 
 
 ## Challenges We Ran Into 
 
-Of course, no one template will serve all projects since your needs may be different. So I'll be adding more in the near future. You may also suggest changes by forking this repo and creating a pull request or opening an issue. Thanks to all the people have have contributed to expanding this template!
-
-A list of commonly used resources that I find helpful are listed in the acknowledgements.
+Of course, no hackathon would be complete without its fair share of hiccups! Some of the notable challenges we faced were related to importing and managing dozens of image and media files. There were also minor challenges with resolving merge conflicts with the various repository requests. 
 
 ## Accomplishments 
 
 We accomplished the following in a short period of time:
 
-* Your time should be focused on creating something amazing. A project that solves a problem and helps others
-* You shouldn't be doing the same tasks over and over like creating a README from scratch
-* You should element DRY principles to the rest of your life :smile:
-
-A list of commonly used resources that I find helpful are listed in the acknowledgements.
+* Two hackathon newbies were christened on our team!
+* Architecting a complete project in a short period of time.
+* Overall team synergy and cooperation.
+* All the awesome work we collectively invested.
 
 ## What We Learned 
 
 We learned the following very quickly:
 
-* Your time should be focused on creating something amazing. A project that solves a problem and helps others
-* You shouldn't be doing the same tasks over and over like creating a README from scratch
-* You should element DRY principles to the rest of your life :smile:
+* Accessing & Navigating Google Vision API
+* Importing image files with Webpack to components
+* Tailwind.CSS
 
 ## What's Next 
 
-Of course, no one template will serve all projects since your needs may be different. So I'll be adding more in the near future. You may also suggest changes by forking this repo and creating a pull request or opening an issue. Thanks to all the people have have contributed to expanding this template!
+We are looking foward to many new opportunities in the near future, including;
 
-A list of commonly used resources that I find helpful are listed in the acknowledgements.
+* Collaborating on new challenging hackathons together
+* Completing coding bootcamp
+* Deployed link for this project
 
 <!-- BUILT WITH -->
 ## Built With 
@@ -182,24 +208,6 @@ This is an example of how to list things you need to use the software and how to
   ```sh
   npm install npm@latest -g
   ```
-
-### Installation
-
-1. Get a free API Key at [https://example.com](https://example.com)
-2. Clone the repo
-   ```sh
-   git clone https://github.com/your_username_/Project-Name.git
-   ```
-3. Install NPM packages
-   ```sh
-   npm install
-   ```
-4. Enter your API in `config.js`
-   ```JS
-   const API_KEY = 'ENTER YOUR API';
-   ```
-
-
 
 <!-- USAGE EXAMPLES ->
 ## Usage
