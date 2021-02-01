@@ -68,8 +68,8 @@ export default function Results() {
           <span className="number-order">We'll handle the rest.</span>
         </h2>
         <p className="steps">
-          Get check image. Upload it. Click validate. <br />
-          Easy as one, two, three!
+          Upload Check. Click Validate. <br />
+          Easy, No Hassle!
         </p>
         {message ? <Message msg={message} /> : null}
         <form onSubmit={handelSumbit}>
