@@ -1,0 +1,48 @@
+.team {
+	display: flex;
+	flex-direction: column;
+}
+
+.team h1 {
+	margin: 1.3em 0;
+}
+.team .avatar {
+	flex-wrap: wrap;
+	display: flex;
+	justify-content: space-evenly;
+	filter: drop-shadow(0.05em 0.1rem 25rem rgb(0, 0, 0));
+}
+
+.avatar img {
+	text-align: center;
+	border-radius: 0px;
+	border-radius: 0px;
+	background: #ffffff;
+	box-shadow: 10px 5px 13px #666666, -21px -21px 13px #ffffff2e;
+}
+
+.avatar .role {
+	text-align: center;
+	color: rgba(0, 0, 0, 0.479);
+}
+
+.avatar .role h3 {
+	margin-top: 0.5rem;
+}
+
+/* purpose */
+
+.purpose {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	margin: -1em auto;
+	text-align: left;
+	font-size: 1.1em;
+	width: 70%;
+}
+
+.purpose p {
+	font-size: 1.5em;
+	margin-top: 2em;
+}
