@@ -8,7 +8,12 @@ import axios from "axios";
 
 import checkPlaceholder from "../images/checkPlaceholder.png";
 
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faFileUpload } from "@fortawesome/free-solid-svg-icons";
+
 import "../../App.css";
+
+const fileUpload = <FontAwesomeIcon icon={faFileUpload} />;
 
 export default function Results() {
 	const [file, setFile] = useState("");
@@ -82,7 +87,7 @@ export default function Results() {
 
 					<Progress percentage={uploadPercentage} />
 
-					<input type="submit" value="Validate" />
+					<input type="submit" value="Upload" />
 				</form>
 
 				{message ? <Message msg={message} /> : null}
@@ -110,7 +115,7 @@ export default function Results() {
 					</div>
 				) : (
 					<div className="info-placeholder">
-						<h3>Your information will show up here after clicking validating</h3>
+						<h3>Your information will show up here after clicking Upload</h3>
 					</div>
 				)}
 			</div>

@@ -2,8 +2,8 @@ import React, { useState } from "react";
 
 import Message from "./Message";
 import Progress from "./ Progress";
-// import ResultContainer from './ResultContainer'
 import axios from "axios";
+
 
 const Upload = () => {
   const [file, setFile] = useState("");
