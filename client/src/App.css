@@ -1,47 +1,49 @@
+@import url("https://fonts.googleapis.com/css2?family=Sniglet:wght@800&display=swap");
+
 * {
-	box-sizing: border-box;
-	margin: 0;
-	padding: 0;
-	font-family: "PT Sans", sans-serif;
+  font-family: "Sniglet", cursive;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "PT Sans", sans-serif;
 }
 
 .home,
 .services,
-.products,
-.sign-up {
-	display: flex;
-	height: 90vh;
-	align-items: center;
-	justify-content: center;
-	font-size: 3rem;
+.products {
+  display: flex;
+  height: 90vh;
+  align-items: center;
+  justify-content: center;
+  font-size: 3rem;
 }
 
 .services {
-	background-image: url("./components/images/img-2.jpg");
-	box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.2);
-	background-position: center;
-	background-size: cover;
-	background-repeat: no-repeat;
-	color: #fff;
-	font-size: 100px;
+  background-image: url("./components/images/img-2.jpg");
+  box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.2);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: #fff;
+  font-size: 100px;
 }
 
 .products {
-	background-image: url("./components/images/img-8.jpg");
-	box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.2);
-	background-position: center;
-	background-size: fill;
-	background-repeat: no-repeat;
-	color: #fff;
-	font-size: 100px;
+  background-image: url("./components/images/img-8.jpg");
+  box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.2);
+  background-position: center;
+  background-size: fill;
+  background-repeat: no-repeat;
+  color: #fff;
+  font-size: 100px;
 }
 
 .sign-up {
-	background-image: url("./components/images/img-9.jpg");
-	box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.2);
-	background-position: center;
-	background-size: cover;
-	background-repeat: no-repeat;
-	color: #fff;
-	font-size: 100px;
+  background-image: url("./components/images/img-9.jpg");
+  box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.2);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: #fff;
+  font-size: 100px;
 }
