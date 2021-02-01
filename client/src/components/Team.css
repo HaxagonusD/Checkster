@@ -22,6 +22,12 @@
 	box-shadow: 20px 20px 0px #023e8a, -20px -20px 0px #001c41;
 }
 
+@media only screen and (max-width: 1315px) {
+	.avatar img {
+		margin: 2em;
+	}
+}
+
 .avatar .role {
 	text-align: center;
 	color: rgba(0, 0, 0, 0.479);
