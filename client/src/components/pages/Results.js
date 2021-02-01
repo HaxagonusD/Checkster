@@ -6,10 +6,6 @@ import Message from "../Message";
 import Progress from "../Message";
 import axios from "axios";
 
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faGithub } from "@fortawesome/free-brands-svg-icons";
-import { faLinkedin } from "@fortawesome/free-brands-svg-icons";
-
 import checkPlaceholder from "../images/checkPlaceholder.png";
 
 import "../../App.css";
