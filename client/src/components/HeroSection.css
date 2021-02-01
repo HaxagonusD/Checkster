@@ -1,80 +1,79 @@
 video {
-  object-fit: cover;
-  width: 100%;
-  height: 100%;
-  position: fixed;
-  z-index: -1;
+	object-fit: cover;
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	z-index: -1;
 }
 
 .hero-container {
-  /* background: url("https://images.unsplash.com/photo-1515180711443-f8685c6d6a74?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80")
+	/* background: url("https://images.unsplash.com/photo-1515180711443-f8685c6d6a74?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80")
 		center center/cover no-repeat; */
-  height: 100vh;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.2);
-  object-fit: contain;
+	height: 100vh;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.2);
+	object-fit: contain;
 }
 
 .hero-container img {
-  width: 100%;
+	width: 100%;
 }
 
 .hero-container > h1 {
-  color: #fff;
-  font-size: 100px;
-  margin-top: -100px;
-  filter: drop-shadow(0.05em 0.1rem 0.25rem rgb(0, 0, 0));
+	color: #fff;
+	font-size: 100px;
+	margin-top: -100px;
+	filter: drop-shadow(0.05em 0.1rem 0.25rem rgb(0, 0, 0));
 }
 
 .hero-container > p {
-  margin-top: 8px;
-  color: #fff;
-  font-size: 32px;
-  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
-    "Lucida Sans", Arial, sans-serif;
-  filter: drop-shadow(0.05em 0.1rem 0.25rem rgb(0, 0, 0));
+	margin-top: 8px;
+	color: #fff;
+	font-size: 35px;
+	font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+	filter: drop-shadow(0.1em 0.1rem 0.01rem rgb(0, 0, 0));
 }
 
 .hero-btns {
-  margin-top: 32px;
-  filter: drop-shadow(0.05em 0.1rem 0.25rem rgb(0, 0, 0));
+	margin-top: 32px;
+	filter: drop-shadow(0.05em 0.1rem 0.25rem rgb(0, 0, 0));
 }
 
 .hero-btns .btn {
-  margin: 6px;
+	margin: 6px;
 }
 
 .fa-play-circle {
-  margin-left: 4px;
+	margin-left: 4px;
 }
 
 @media screen and (max-width: 960px) {
-  .hero-container > h1 {
-    font-size: 70px;
-    margin-top: -150px;
-  }
+	.hero-container > h1 {
+		font-size: 70px;
+		margin-top: -150px;
+	}
 }
 
 @media screen and (max-width: 768px) {
-  .hero-container > h1 {
-    font-size: 50px;
-    margin-top: -100px;
-  }
+	.hero-container > h1 {
+		font-size: 50px;
+		margin-top: -100px;
+	}
 
-  .hero-container > p {
-    font-size: 30px;
-  }
+	.hero-container > p {
+		font-size: 30px;
+	}
 
-  .btn-mobile {
-    display: block;
-    text-decoration: none;
-  }
+	.btn-mobile {
+		display: block;
+		text-decoration: none;
+	}
 
-  .btn {
-    width: 100%;
-  }
+	.btn {
+		width: 100%;
+	}
 }

@@ -15,10 +15,17 @@
 
 .avatar img {
 	text-align: center;
-	border-radius: 0px;
+	background: #ffffff;
+	border: 2px solid white;
 	border-radius: 0px;
 	background: #ffffff;
-	box-shadow: 10px 5px 13px #666666, -21px -21px 13px #ffffff2e;
+	box-shadow: 20px 20px 0px #023e8a, -20px -20px 0px #001c41;
+}
+
+@media only screen and (max-width: 1315px) {
+	.avatar img {
+		margin: 2em;
+	}
 }
 
 .avatar .role {
@@ -27,7 +34,7 @@
 }
 
 .avatar .role h3 {
-	margin: 0.5em;
+	margin: 1em;
 }
 
 .role a {
@@ -50,5 +57,5 @@
 
 .purpose p {
 	font-size: 1.5em;
-	margin-top: 2em;
+	margin-top: 1em;
 }
