@@ -44,7 +44,7 @@ export default function Results() {
           setTimeout(() => setUploadPercentage(0), 10000);
         },
       });
-      console.log(res?.data?.extractedData);
+      console.log(res);
 
       const { fileName, filePath } = res.data;
 

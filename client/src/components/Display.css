@@ -1,0 +1,28 @@
+.display-section {
+	display: flex;
+	flex-direction: column;
+}
+
+.display-section img {
+	display: flex;
+	width: 100%;
+	height: auto;
+}
+
+.display-section p {
+	font-size: 1.3em;
+	display: flex;
+	flex-direction: row;
+	align-items: left;
+	margin: 1em;
+}
+
+.info {
+	width: 80%;
+	margin: 0 auto;
+}
+
+.info-subhead {
+	display: flex;
+	color: #023e8a;
+}
