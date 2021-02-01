@@ -44,6 +44,9 @@
 	margin: 2em auto;
 	justify-content: center;
 	text-align: center;
+	border-radius: 50px;
+	background: #ffffff;
+	box-shadow: 20px 20px 0px #023d8a8e, -20px -20px 0px #042a5c00;
 }
 
 input[type="file"] {
@@ -51,6 +54,8 @@ input[type="file"] {
 }
 
 input[type="submit"] {
+	background: #003b70;
+	color: white;
 	outline: none;
 	border: none;
 	cursor: pointer;
@@ -60,14 +65,19 @@ input[type="submit"] {
 }
 
 input[type="submit"]:hover {
-	background: #003b70;
+	background: #01294d;
 	color: white;
 	transition: 0.2s ease-in;
 }
 
+label {
+	color: gray;
+	font-size: 15px;
+}
+
 .message {
 	font-size: 20px;
-	color: red;
+	text-align: center;
 }
 
 @media only screen and (max-width: 1094px) {

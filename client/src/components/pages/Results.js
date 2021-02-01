@@ -6,6 +6,10 @@ import Message from "../Message";
 import Progress from "../Message";
 import axios from "axios";
 
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faGithub } from "@fortawesome/free-brands-svg-icons";
+import { faLinkedin } from "@fortawesome/free-brands-svg-icons";
+
 import checkPlaceholder from "../images/checkPlaceholder.png";
 
 import "../../App.css";
@@ -51,10 +55,10 @@ export default function Results() {
 
 			setUploadedFile({ fileName, filePath });
 			setDisplayInfo(res);
-			setMessage("File Uploaded");
+			setMessage("Data processed.");
 		} catch (err) {
 			if (err.response.status === 500) {
-				setMessage("There was a problem with the server");
+				setMessage("There was a problem with the server.");
 			} else {
 				setMessage(err.response.data.msg);
 			}
@@ -74,7 +78,6 @@ export default function Results() {
 					Get check image. Upload it. Click validate. <br />
 					Easy as one, two, three!
 				</p>
-				{message ? <Message msg={message} /> : null}
 				<form onSubmit={handelSumbit}>
 					<div>
 						<input type="file" id="customFile" onChange={handelFile} />
@@ -85,6 +88,8 @@ export default function Results() {
 
 					<input type="submit" value="Validate" />
 				</form>
+
+				{message ? <Message msg={message} /> : null}
 			</div>
 			<div className="display-section">
 				<img src={imageURL} width="600" height="600" />
@@ -108,8 +113,8 @@ export default function Results() {
 						</p>
 					</div>
 				) : (
-					<div>
-						<h1>Your information will show up here</h1>
+					<div className="info-placeholder">
+						<h3>Your information will show up here after clicking validating</h3>
 					</div>
 				)}
 			</div>
