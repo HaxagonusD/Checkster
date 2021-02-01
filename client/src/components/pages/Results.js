@@ -82,7 +82,7 @@ export default function Results() {
 
 					<Progress percentage={uploadPercentage} />
 
-					<input type="submit" value="Upload" />
+					<input type="submit" value="Extract" />
 				</form>
 
 				{message ? <Message msg={message} /> : null}
@@ -110,7 +110,7 @@ export default function Results() {
 					</div>
 				) : (
 					<div className="info-placeholder">
-						<h3>Your information will show up here after clicking Upload</h3>
+						<h3>Your information will show up here after clicking Extract</h3>
 					</div>
 				)}
 			</div>
