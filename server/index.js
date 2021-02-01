@@ -29,7 +29,6 @@ app.post("/results", (req, res) => {
       console.log("Extracted data is here", data);
       res.json({
         fileName: file.name,
-        filePath: `/uploads/${file.name}`,
         extractedData: data,
       });
     })();
