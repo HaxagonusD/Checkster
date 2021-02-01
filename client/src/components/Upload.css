@@ -59,6 +59,12 @@
 	font-size: 0.6em;
 }
 
+@media only screen and (max-width: 800px) {
+	#customFile {
+		margin-left: 0;
+	}
+}
+
 input[type="submit"] {
 	background: #003b70;
 	color: white;
