@@ -8,12 +8,7 @@ import axios from "axios";
 
 import checkPlaceholder from "../images/checkPlaceholder.png";
 
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faFileUpload } from "@fortawesome/free-solid-svg-icons";
-
 import "../../App.css";
-
-const fileUpload = <FontAwesomeIcon icon={faFileUpload} />;
 
 export default function Results() {
 	const [file, setFile] = useState("");
